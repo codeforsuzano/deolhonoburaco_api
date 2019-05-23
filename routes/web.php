@@ -15,9 +15,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->post('login/', 'UsersController@authenticate');
+$router->post('login', 'UsersController@authenticate');
+$router->post('newuser', 'UsersController@newuser');
 
-$router->group(['prefix' => 'buraco'], function ($router) { 
+$router->group(['prefix' => 'buraco'], function ($router) {
     $router->get('/', 'BuracoController@index');
     $router->post('/', 'BuracoController@store');
 });
