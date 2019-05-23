@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
             'name'     => 'Fernando Alves',
             'email'    => 'fer@fer.com',
             'password' => app('hash')->make('123123'),
-            'api_key'  => base64_encode(str_random(40))
+            'token'  => base64_encode(str_random(40))
         ]);
     }
 }
