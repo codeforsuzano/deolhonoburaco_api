@@ -17,7 +17,7 @@ $router->get('/', function () use ($router) {
 
 $router->get('login/', 'UsersController@authenticate');   
 
-$router->group(['prefix' => 'buraco/'], function ($router) { 
+$router->group(['prefix' => 'buraco'], function ($router) { 
     $router->get('/', 'BuracoController@index');
     $router->post('/', 'BuracoController@store');
 });
