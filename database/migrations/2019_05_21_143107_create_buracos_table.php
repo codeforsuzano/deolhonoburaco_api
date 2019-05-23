@@ -18,6 +18,7 @@ class CreateBuracosTable extends Migration
             $table->string('street')->nullable();
             $table->string('photo')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
