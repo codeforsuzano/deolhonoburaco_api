@@ -32,7 +32,7 @@ class UsersController extends Controller
             $users = User::select('id', 'name', 'email')->where('email',$request->input('email'))->get();
             return response()->json(
                 [
-                    'api_key' => $apikey,
+                    'token' => $apikey,
                     'user' => $users
                 ]
             );
