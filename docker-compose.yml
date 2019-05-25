@@ -1,9 +1,12 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
 version: "3.1"
 services:
 
     webserver:
       image: nginx:alpine
-      container_name: codeforsuzano-api-webserver
+      container_name: deolhonoburaco-api-webserver
       working_dir: /application
       volumes:
           - .:/application
@@ -13,7 +16,7 @@ services:
 
     php-fpm:
       build: phpdocker/php-fpm
-      container_name: codeforsuzano-api-php-fpm
+      container_name: deolhonoburaco-api-php-fpm
       working_dir: /application
       volumes:
         - .:/application
